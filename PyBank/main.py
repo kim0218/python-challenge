@@ -30,8 +30,17 @@ with open(budget_data, newline='') as csvfile:
       
 
 
-    print("Total: "+str(total_amount))
-    print("Total Month: "+str(total_month))
-    print("Average Change: "+str(average_change))
-    print("Greatest Increase in Profits: "+str(great_increase))
-    print("Greatest Decrease in Profits: "+str(great_decrease))
+    print("Total: $"+str(total_amount))
+    print("Total Month: $"+str(total_month))
+    print("Average Change: $"+str(average_change))
+    print("Greatest Increase in Profits: $"+str(great_increase))
+    print("Greatest Decrease in Profits: $"+str(great_decrease))
+
+
+# Save result to txt
+with open('Pybank.txt', 'w') as text_file:
+    print("Total: $"+str(total_amount), file=text_file)
+    print("Total Month: $"+str(total_month), file=text_file)
+    print("Average Change: $"+str(average_change), file=text_file)
+    print("Greatest Increase in Profits: $"+str(great_increase), file=text_file)
+    print("Greatest Decrease in Profits: $"+str(great_decrease), file=text_file)
